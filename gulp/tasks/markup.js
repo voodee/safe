@@ -5,13 +5,14 @@ var haml = require('gulp-haml-coffee');
 
 gulp.task('markup', function() {
   gulp.src([
-    config.jsSrc + '/vendor/modernizr-2.8.3.min.js'
+    config.jsSrc + '/vendor/modernizr-2.8.3.min.js',
+    config.jsSrc + '/lib/jquery.mb.YTPlayer.js'
   ], {
     dot: true
   }).pipe(gulp.dest(config.jsDest));
 
   gulp.src([
-    config.srcOther + '/*.{png,xml,txt}',
+    config.srcOther + '/*.{php,png,xml,txt}',
     config.srcOther + '/.htaccess'
   ], {
     dot: true

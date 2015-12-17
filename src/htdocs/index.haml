@@ -1,18 +1,1367 @@
 !!!
 %html.no-js{:lang => ""}
   %head
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
-    %title
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %title Поддержка проектов - Dotsi
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}
     / Place favicon.ico in the root directory
-    %link{:href => "css/main.css", :rel => "stylesheet"}/
+    %link{ href: 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }
+    %link{:href => "css/main.css", :rel => "stylesheet"}
     %script{:src => "js/modernizr-2.8.3.min.js"}
-  %body
+  %body#cbp-so-scroller.cbp-so-scroller.royal_preloader
     /[if lt IE 8]
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     / Add your site or application content here
-    %p Hello world! This is HTML5 Boilerplate.
-    %script{:src => "js/main.js"}
+
+    / %section.section.home
+
+    /   .triangle
+    /     #principalheader.triangle-canvas
+    /       #shadercanvas.triangle-canvas-inner
+    /     .container.home-container
+    /       .row 
+    /         .col-md-6.col-xs-12
+    /           %h1.home-title Поддержка и продвижение
+    /           %p.home-desc интернет-проектов
+    /           %p.home-btn
+    /             %a.btn.btn-border.btn-white.btn-big{:href => '#', :title => '', , :alt => ''} Узнать подробности
+
+    /         / .col-md-6.col-xs-12.home-col-right
+    /         /   .row
+    /         /     .col-xs-4.home-item
+    /         /       %i.pe-7s-users
+    /         /       %p.home-item-number 12 
+    /         /       %p проектов на поддержке
+
+    /         /     .col-xs-4.home-item
+    /         /       %i.pe-7s-clock
+    /         /       %p.home-item-number 15
+    /         /       %p минут - время отклика специалиста
+
+    /         /     .col-xs-4.home-item
+    /         /       %i.pe-7s-date
+    /         /       %p.home-item-number 5
+    /         /       %p 
+    /         /         лет успешной
+    /         /         %br
+    /         /         работы
+
+
+    / .shape-section
+    /   .shape-cover
+    /     .shape-inner.shape-color-darkblue.shape-index-2
+    /       %section.section.about
+    /         .container.about-container-top
+    /           .row
+    /             .col-md-4.col-xs-12.about-container-top-left
+    /               %p.about-top-desc
+    /                 %span.bold Более 5 лет 
+    /                 мы развиваем проекты наших клиентов: крупных страховых компаний, банков, интернет-магазинов, строительных корпораций и многих других. 
+
+    /             .col-md-6.col-md-offset-2.col-xs-12.about-container-top-right
+    /               %h2.about-top-title
+    /                 Сайт умирает сразу после сдачи, если им не заниматься
+
+
+    /       %section.section.what
+    /         .container
+    /           .row
+    /             .col-md-7
+    /               %h2.section-title
+    /                 Что мы умеем?
+    /           .row{ :style => 'height: 47rem;' }
+
+
+    /     .shape-inner.shape-color-price.shape-index-4
+    /       %section.section.step
+    /         .container.step
+    /           .row
+    /             .col-xs-12
+    /               %h2.section-title
+    /                 Схема работы
+    /           .row
+
+    /             .col-md-8.col-md-offset-2.col-xs-12
+    /               .row
+    /                 .col-xs-12
+    /                   .step-item
+    /                     Задача фиксируется в системе управления проектом
+
+
+    /               .row
+    /                 .col-xs-2.col-xs-offset-2
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /                 .col-xs-2.col-xs-offset-4
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /               .row
+    /                 .col-xs-6
+    /                   .step-item
+    /                     Задача до 2-х часов
+
+    /                 .col-xs-6
+    /                   .step-item
+    /                     Задача более 2-х часов
+
+    /               .row
+    /                 .col-xs-2.col-xs-offset-2
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /                 .col-xs-2.col-xs-offset-4
+    /                   .step-angle
+    /                     %i.icon-down
+
+
+    /               .row
+    /                 .col-xs-6
+    /                   .step-item
+    /                     %span.bold Немедленно
+    /                     передается 
+    /                     %span.bold в работу
+
+    /                 .col-xs-6
+    /                   .step-item
+    /                     Экспертная оценка согласовывается с заказчиком
+
+
+    /               .row
+
+    /                 .col-xs-2.col-xs-offset-8
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /               .row
+    /                 .col-xs-2.col-xs-offset-2
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /                 .col-xs-6.col-xs-offset-2
+    /                   .step-item
+    /                     Задача передается в работу
+
+
+    /               .row
+
+    /                 .col-xs-2.col-xs-offset-8
+    /                   .step-angle
+    /                     %i.icon-down
+
+    /               .row
+    /                 .col-xs-12
+    /                   .step-item
+    /                     %span.bold Менеджер передает результат работы заказчику
+    
+
+
+
+    /       %section.section.price
+    /         .container.price-container
+    /           .row
+    /             .col-xs-12
+    /               %h2.section-title
+    /                 Сколько стоит?
+  
+    /           .row
+    /             .col-md-4.col-sm-6.col-xs-12.price-box
+    /               %article.price-article.price-article-lion
+    /                 %h3 Lion
+    /                 %p.price-article-count
+    /                   %span.price-article-count-number 70
+    /                   часов
+    /                   %span.price-article-count-star> *
+    /                 %p.price-article-sum
+    /                   34 990
+    /                   %i.fa.fa-rub
+    /             .col-md-4.col-sm-6.col-xs-12.price-box.price-article-leopard-box
+    /               %article.price-article.price-article-leopard
+    /                 %h3 Leopard
+    /                 %p.price-article-count 
+    /                   %span.price-article-count-number 30
+    /                   часов
+    /                   %span.price-article-count-star> *
+    /                 %p.price-article-sum
+    /                   24 990
+    /                   %i.fa.fa-rub
+    /             .col-md-4.col-sm-6.col-xs-12.price-box
+    /               %article.price-article.price-article-kitty
+    /                 %h3 Kitty
+    /                 %p.price-article-count
+    /                   %span.price-article-count-number 12
+    /                   часов
+    /                   %span.price-article-count-star> *
+    /                 %p.price-article-sum
+    /                   14 990
+    /                   %i.fa.fa-rub
+
+    /           .row.price-desc
+    /             .col-xs-12
+    /               %p 
+    /                 %span *
+    /                 Количество часов занятости 
+    /                 %span.bold специалистов
+    /                 по сопровождению в месяц
+          
+    /     /.shape-inner.shape-color-price.shape-index-4
+          
+    /       / .container.step-container
+    /       /   %h2.section-title
+    /       /     Схема работы
+
+    /       / .container.step-container
+
+
+
+
+
+
+    / %section.section.price
+    /   .share
+    /     .share-inner
+    /       .container.price-container
+    /         .row.price-container-top
+    /           %h2.section-title
+    /             Выбери своего
+    /             %br>
+    /             зверя
+    /       .container.price-container
+
+
+ 
+    / %section.section.desc
+    /   .container
+    /     %h2.section-title
+    /       Тарифные опции
+
+    /   .container
+    /     %table.table.table-striped.table-hover
+    /       %thead
+    /         %tr
+    /           %th 
+    /           %th Kitty
+    /           %th{ :style => 'font-weight: 300;' } Leopard
+    /           %th Lion
+
+    /       %tbody
+    /         %tr.desc-number
+    /           %td Часы специалистов
+    /           %td
+    /             12
+    /           %td
+    /             30
+    /           %td
+    /             70
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Сопровождение
+
+    /         %tr
+    /           %td Мониторинг состояния сайта
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Еженедельное резервное копирование
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Ежедневное резервное копирование
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+ 
+    /         %tr
+    /           %td Анализ возникновения критических ошибок 
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Работа по устранению ошибок и восстановлению работоспособности
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Антивирусная защита
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Защита от интенет-злоумышленников
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Администрирование работы хостинга
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Разработка нового функционала и доработка существующего (часов в месяц)
+    /           %td
+    /             до 2
+    /           %td
+    /             до 5
+    /           %td
+    /             до 8
+
+    /         %tr
+    /           %td Рекомендации и использование последних разработок в защите от атак
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Оперативная защита от DDoS-атак
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Оптимизация высоконагруженных систем
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Разработка рекламных баннеров
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Работа над улучшением дизайна сайта
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Создание иконок, иллюстраций и другой графики
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.danger 
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Наполнение
+
+    /         %tr
+    /           %td Составление плана публикаций
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Написание уникальных тематических текстов (тыс. знаков с пробелами)
+    /           %td
+    /             до 6
+    /           %td
+    /             до 11
+    /           %td
+    /             до 22
+
+    /         %tr
+    /           %td Подбор и размещение фото- и видео-материалов (количество позиций)
+    /           %td
+    /             до 8
+    /           %td
+    /             до 20
+    /           %td
+    /             до 50
+
+    /         %tr
+    /           %td Перевод контента на любые языки
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Модерирование, удаление спам-сообщений, ответы на вопросы
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Размещение статей на тематических площадках (количество публикаций)
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td
+    /             до 3
+
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Оптимизация
+
+    /         %tr
+    /           %td Выявление ошибок, ведущих к некорректной индексации сайта
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Оптимизация контента на сайте
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+                
+    /         %tr
+    /           %td Составление внутренней ссылочной структуры сайта
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+                
+    /         %tr
+    /           %td Отслеживание уникальности текстового содержимого сайта
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Изучение и анализ юзабилити
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td A -> B тесты
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Продвижение (SEO 2.0)
+
+    /         %tr
+    /           %td СЕО администрирование сайта
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+
+    /         %tr
+    /           %td Составление первичного ядра поисковых запросов
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Составление полного ядра поисковых запросов
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Мониторинг позиций сайта в поисковой выдаче (кол-во запросов)
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td 
+    /             до 100
+    /           %td.success
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Регулярный мониторинг ссылочной массы
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success
+    /             %i.fa.fa-check
+    /           %td.success
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Продвижение бренда сайта, отслеживание отзывов в СМИ
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td E-mail рассылка (писем в месяц)
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td
+    /             до 2 000
+    /           %td
+    /             до 10 000
+
+    /         %tr
+    /           %td SMS рассылка (сообщений в месяц)
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td
+    /             до 1 000
+    /           %td
+    /             до 4 000
+    /         %tr
+    /           %td Ежемесячная корректировка стратегии продвижения сайта
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Ежеквартальный аудит сайтов конкурентов и предметной области
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+
+    /         %tr
+    /           %td Планирование долгосрочной стратегии развития проекта
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Социальные сети (SMMS и SMO)
+
+    /         %tr
+    /           %td Администрирование и ведение групп в социальных сетях (кол-во соц. сетей)
+    /           %td
+    /             2 
+    /           %td
+    /             3
+    /           %td
+    /             4
+    /         %tr
+    /           %td Брендирование в группы 
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check 
+
+    /         %tr
+    /           %td Работа с социальными сигналами
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Отслеживание популярных тем в сети и своевременная "подстройка" под тренд
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+
+
+    /         %tr.info.desc-separator
+    /           %td{ :colspan => 4} Обратная связь
+
+
+
+    /         %tr
+    /           %td Подробный отчет в конце каждого месяца
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Краткий промежуточный отчет в середине месяца
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Персональный менеджер
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+    /         %tr
+    /           %td Время реакции
+    /           %td
+    /             до 8 часов 
+    /           %td
+    /             до 4 часов
+    /           %td
+    /             до 15 минут
+
+    /         %tr
+    /           %td 
+    /             Поддержка по телефону
+    /           %td.danger
+    /             %i.fa.fa-times
+    /           %td.success 
+    /             %i.fa.fa-check
+    /           %td.success 
+    /             %i.fa.fa-check
+
+    /         %tr
+    /           %td Консультации специалиста
+    /           %td
+    /             1 час
+    /           %td
+    /             3 часа 
+    /           %td
+    /             5 часов 
+
+    /         %tr.desc-number
+    /           %td Абонентская плата в месяц
+    /           %td
+    /             14 990
+    /             %i.fa.fa-rub
+    /           %td
+    /             24 990
+    /             %i.fa.fa-rub
+    /           %td
+    /             34 990
+    /             %i.fa.fa-rub
+
+
+    /   .container
+    /     .row
+    /       .col-xs-12
+    /         %p Стоимость работы специалиста по сопровождению сверх тарифного плана - 600руб./час. 
+
+    /         %p Стоимость услуг контент-менеджера за 1000 знаков, в случае превышения количества знаков, включенных в пакет - 120руб.
+
+    /         %p К положительным сторонам услуги сопровождения стоит также отнести отсутствие необходимости со стороны клиента нанимать отдельного человека для управления сайтом, производить обучение и дополнительно нагружать сотрудников отделов маркетинга, рекламы, PR. Лучше доверить эту работу профессионалам.
+
+
+
+
+    /   .container
+    /     .row
+    /       .col-xs-12.col-md-4
+    /         Kitty подходит компаниям, которые нуждаются в стабильной работе сайта и почты. 
+    /       .col-xs-12.col-md-4
+    /         Leopard подходит компаниям, которые используют интернет как инструмент коммуникаций, либо как средства массовой информации, представляющего широчайшие возможности в продвижении торговых марок, товаров и услуг; для компаний, которые хотят поддерживать информацию на сайте, но не содержат штат собственных контент-менеджеров. 
+    /       .col-xs-12.col-md-4
+    /         Lion комплексно решает все задачи по модернизации, постоянному развитию проекта и анализу эффективности его работы. Рекомендуется компаниям, где сайт расценивается как инструмент постоянного увеличения прибыли.
+
+
+    / %section.section.scope
+    /   .container
+    /     %h2.section-title В каких сферах мы работаем?
+    /     %h2.section-desc Мы знаем всех ваших конкурентов: стратегию продвижения,посещаемость, ключевые запросы, рекламную активность, бюджеты в различных сферах.
+    /   .container
+    /     .row
+    /       .col-xs-12.col-md-6
+    /         %ul.scope-list
+    /           %li Банковская деятельность
+    /           %li Недвижимость
+    /           %li Юридические услуги
+    /           %li Строительство
+    /           %li Промышленное оборудование
+    /           %li Интернет-магазины
+    /           %li Грузоперевозки
+
+    /       .col-xs-12.col-md-6
+    /         %ul.scope-list
+    /           %li Автомобильные сайты
+    /           %li Переводческие услуги
+    /           %li Мебель
+    /           %li Отдых и туризм
+    /           %li Детские товары
+    /           %li Развлекательные и новостные порталы
+    /           %li Полиграфия и другие
+
+
+
+    / %section.section
+    /   .container
+    /     .row
+    /       %p После того как сайт создан, мы предлагаем комплекс мер по его технической поддержке: обновление контента, оперативное изменение информации на сайте, настройка CMS. Это позволяет обеспечить высокую надежность работы сервисов сайта, а также в дальнейшем расширять и совершенствовать проекты.
+
+    /       %p Наши специалисты напишут новые тексты, разработают новые баннеры, добавят новые функции на сайт, проследят за оплатой хостинга и доменного имени.
+    / %section.section.price
+    /   .container
+    /     %h2.section-title
+          
+
+    /   .container
+    /     .row
+    /       .col-xs-12
+    /         %p Продвигаем сайты с 2007 года
+    /         Более 2000 успешных проектов
+    /         Опыт раскрутки сайтов
+    /         различных тематик
+    /         Знание сегментов рынка:
+    /         готовые маркетинговые аудиты
+    /         Гарантии результата
+    /         Быстрый старт и минимальный
+    /         срок раскрутки вашего сайта (от 1 месяца)
+    /         Масштабируемость команды
+    /         под проект любой
+    /         сложности (4—60 человек)
+    /         План-факт работ
+    /         по продвижению вашего сайта
+    /         Доступ в Личный кабинет:
+    /         контроль результатов
+    /         продвижения 24/7
+    /         Стоимость раскрутки
+    /         от 30 000 руб.
+    /         Бонусы клиентам (бесплатные
+    /         аудиты)
+
+
+
+
+
+
+
+    %section.section.price
+      .container
+        %h2.section-title
+          Тарифы на поддержку сайта
+
+      .container.price-container
+        .row
+          .col-md-4.col-sm-6.col-xs-12.price-box
+            %article.price-article.price-article-lion
+              %h3 Lion
+              %p.price-article-count
+                %span.price-article-count-number 60
+                часов
+                %span.price-article-count-star> *
+              %p.price-article-sum
+                34 990
+                %i.fa.fa-rub
+          .col-md-4.col-sm-6.col-xs-12.price-box.price-article-leopard-box
+            %article.price-article.price-article-leopard
+              %h3 Leopard
+              %p.price-article-count 
+                %span.price-article-count-number 25
+                часов
+                %span.price-article-count-star> *
+              %p.price-article-sum
+                24 990
+                %i.fa.fa-rub
+          .col-md-4.col-sm-6.col-xs-12.price-box
+            %article.price-article.price-article-kitty
+              %h3 Kitty
+              %p.price-article-count
+                %span.price-article-count-number 12
+                часов
+                %span.price-article-count-star> *
+              %p.price-article-sum
+                14 990
+                %i.fa.fa-rub
+
+      .container
+        .row.price-desc
+          .col-xs-12
+            %p 
+              %span *
+              Общее количество часов занятости 
+              %span.bold специалистов
+              по сопровождению в месяц
+
+
+
+
+    %section.section.desc
+      .container
+        %h2.section-title
+          Подробное описание
+
+      .container
+        %table.table.table-striped.table-hover
+          %thead
+            %tr
+              %th 
+              %th Kitty
+              %th{ :style => 'font-weight: 300;' } Leopard
+              %th Lion
+
+          %tbody
+            %tr.desc-number
+              %td Часы специалистов
+              %td
+                12
+              %td
+                25
+              %td
+                60
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Сопровождение
+
+            %tr
+              %td Мониторинг состояния сайта
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Еженедельное резервное копирование
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Ежедневное резервное копирование
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+ 
+            %tr
+              %td Анализ возникновения критических ошибок 
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Работа по устранению ошибок и восстановлению работоспособности
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Антивирусная защита
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Защита от интенет-злоумышленников
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Администрирование работы хостинга
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Разработка нового функционала и доработка существующего (часов в месяц)
+              %td
+                до 2
+              %td
+                до 5
+              %td
+                до 8
+
+            %tr
+              %td Рекомендации и использование последних разработок в защите от атак
+              %td.danger
+                %i.fa.fa-times
+              %td.danger 
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Оперативная защита от DDoS-атак
+              %td.danger
+                %i.fa.fa-times
+              %td.danger 
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Оптимизация высоконагруженных систем
+              %td.danger
+                %i.fa.fa-times
+              %td.danger 
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Разработка рекламных баннеров
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Работа над улучшением дизайна сайта
+              %td.danger 
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Создание иконок, иллюстраций и другой графики
+              %td.danger 
+                %i.fa.fa-times
+              %td.danger 
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Наполнение
+
+            %tr
+              %td Составление плана публикаций
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Написание уникальных тематических текстов (тыс. знаков с пробелами)
+              %td
+                до 6
+              %td
+                до 11
+              %td
+                до 22
+
+            %tr
+              %td Подбор и размещение фото- и видео-материалов (количество позиций)
+              %td
+                до 8
+              %td
+                до 20
+              %td
+                до 50
+
+            %tr
+              %td Перевод контента на любые языки
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Модерирование, удаление спам-сообщений, ответы на вопросы
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Размещение статей на тематических площадках (количество публикаций)
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td
+                до 3
+
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Оптимизация
+
+            %tr
+              %td Выявление ошибок, ведущих к некорректной индексации сайта
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Оптимизация контента на сайте
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+                
+            %tr
+              %td Составление внутренней ссылочной структуры сайта
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+                
+            %tr
+              %td Отслеживание уникальности текстового содержимого сайта
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Изучение и анализ юзабилити
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td A -> B тестирование
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Продвижение (SEO 2.0)
+
+            %tr
+              %td СЕО администрирование сайта
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+
+            %tr
+              %td Составление первичного ядра поисковых запросов
+              %td.success
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Составление полного ядра поисковых запросов
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success
+                %i.fa.fa-check
+
+            %tr
+              %td Мониторинг позиций сайта в поисковой выдаче (кол-во запросов)
+              %td.danger
+                %i.fa.fa-times
+              %td 
+                до 100
+              %td.success
+                %i.fa.fa-check
+
+            %tr
+              %td Регулярный мониторинг ссылочной массы
+              %td.danger
+                %i.fa.fa-times
+              %td.success
+                %i.fa.fa-check
+              %td.success
+                %i.fa.fa-check
+
+            %tr
+              %td Продвижение бренда сайта, отслеживание отзывов в СМИ
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td E-mail рассылка (писем в месяц)
+              %td.danger
+                %i.fa.fa-times
+              %td
+                до 2 000
+              %td
+                до 10 000
+
+            %tr
+              %td SMS рассылка (сообщений в месяц)
+              %td.danger
+                %i.fa.fa-times
+              %td
+                до 1 000
+              %td
+                до 4 000
+            %tr
+              %td Ежемесячная корректировка стратегии продвижения сайта
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Ежеквартальный аудит сайтов конкурентов и предметной области
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+
+            %tr
+              %td Планирование долгосрочной стратегии развития проекта
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Социальные сети (SMMS и SMO)
+
+            %tr
+              %td Администрирование и ведение групп в социальных сетях (кол-во соц. сетей)
+              %td
+                2 
+              %td
+                3
+              %td
+                4
+            %tr
+              %td Брендирование в группы 
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check 
+
+            %tr
+              %td Работа с социальными сигналами
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Отслеживание популярных тем в сети и своевременная "подстройка" под тренд
+              %td.danger
+                %i.fa.fa-times
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+
+
+            %tr.info.desc-separator
+              %td{ :colspan => 4} Обратная связь
+
+
+
+            %tr
+              %td Подробный отчет в конце каждого месяца
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Краткий промежуточный отчет в середине месяца
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Персональный менеджер
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+            %tr
+              %td Время реакции
+              %td
+                до 8 часов 
+              %td
+                до 4 часов
+              %td
+                до 15 минут
+
+            %tr
+              %td 
+                Поддержка по телефону
+              %td.danger
+                %i.fa.fa-times
+              %td.success 
+                %i.fa.fa-check
+              %td.success 
+                %i.fa.fa-check
+
+            %tr
+              %td Консультации специалиста
+              %td
+                1 час
+              %td
+                3 часа 
+              %td
+                5 часов 
+
+            %tr.desc-number
+              %td Абонентская плата в месяц
+              %td
+                14 990
+                %i.fa.fa-rub
+              %td
+                24 990
+                %i.fa.fa-rub
+              %td
+                34 990
+                %i.fa.fa-rub
+
+
+
+    %script{:src => "//maps.googleapis.com/maps/api/js"}
+    %script{:src => "js/main.js"}    

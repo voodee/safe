@@ -14,7 +14,7 @@ module.exports = {
   },
   images: {
     src: src + "/images/**",
-    dest: dest + "/images"
+    dest: dest + "/img"
   },
   markup: {
     src: src + "/htdocs/**",
@@ -39,14 +39,14 @@ module.exports = {
       // Additional file extentions to make optional
       extensions: ['.coffee', '.hbs'],
       // list of modules to make require-able externally
-      require: ['jquery', 'underscore']
+      require: ['jquery']
       // See https://github.com/greypants/gulp-starter/issues/87 for note about
       // why this is 'backbone/node_modules/underscore' and not 'underscore'
     }]
   },
   production: {
-    cssSrc: dest + '/css/*.css',
-    jsSrc: dest + '/js/*.js',
+    cssSrc: dest + '/css/**',
+    jsSrc: dest + '/js/**',
     dest: dest
   }
 };
